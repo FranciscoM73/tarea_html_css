@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    /** propiedad para manejar el control de las cajas */
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #aab1f8;
+    
+    
+}
+nav{
+    
+    margin: auto;
+    height: 50px;
+    background-color: #637aa2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    margin-top: 3px;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal >li >a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+} 
+.menu-vertical li:hover{
+    background-color: #2d5288;
+}
+.menu-vertical li a:hover{
+    display: block;
+    padding: 15px 15px 15px 15px;
+    color: antiquewhite;
+    align-items: center;
+}
+nav a{
+    padding: 0 40px;
+    color: black;
+}
+nav a:hover{ /*este atributo permite que al colocar el cursor sobre las palabars del menu ambien de color*/
+    color: blue;
+}
+/*apartado inicio*/
+
+/*.banner .bannerark img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+}*/
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-image: url(img/banner\ ark.jpeg);
+    border-radius: 10px;
+}
+.texto{
+    color: #070404;
+    text-transform: uppercase;
+    letter-spacing: 24px;
+}
+.banner2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: url(img/bestiario.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.texto2 {
+    color: #0a0606;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.banner4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: url(img/mapas3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+
+.texto4 {
+    color: #4f2727;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+}
+footer{
+    background-color: #637aa2;
+    padding: 20px;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    
+}
+.texto-contacto{
+    font-size: 1.2rem;
+    color: #031e46;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.footer-parrafo{
+    line-height: 40px;
+}
+p{
+    color: rgb(15, 45, 105);
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 60%;
+}
+.icons a{
+    background-color: #2d5288;
+    border-radius: 60%;
+    margin: 5px;
+    color: rgb(201, 224, 246);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: all 0.5s;
+    width: 50px;
+    height: 38px;
+}
+.icons a:hover{
+    background-color: transparent;
+}
+/*apartado de bestiario*/
+h1{
+    text-align: center;
+    color: hsl(0, 0%, 8%);
+}
+.dinos{
+    position: relative;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 5.5rem;
+    
+    
+}
+.dinos .imagen{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #637aa2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    border-radius: 15px;
+}
+.imagen img{
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+.imagen .descripcion{
+    flex-grow: 1;
+}
+.imagen h2{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.imagen p{
+    margin: 0;
+}
+/*apartado de mapas*/
+.carusel {
+    display: flex;
+    height: 150 px;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    
+}
+.carusel img{
+    width: 50px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 8;
+    transition: .5s ease;
+    border-color: #4f2727;
+    border-radius: 15px;
+    border: 30px #152b4c;
+    display: flex;
+    justify-content: center;
+}
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.tema{
+    text-align: center;
+    
+}
+.texto-carusel{
+    text-align: center;
+    font-family: cursive;
+}
+
+/*apartado media queries*/
+@media screen and (max-width: 1000px){
+    
+    .footer-container .box-center{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 200px;
+    }
+}
+
